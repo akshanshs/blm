@@ -10,6 +10,7 @@ imblearn
 xgboost
 catboost
 pymongo
+python-dotenv
 from_root
 evidently==0.2.8
 dill
