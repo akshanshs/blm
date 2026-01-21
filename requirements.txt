@@ -10,6 +10,7 @@ imblearn
 xgboost
 catboost
 pymongo
+certifi
 python-dotenv
 from_root
 evidently==0.2.8
