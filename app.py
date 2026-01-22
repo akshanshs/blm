@@ -9,6 +9,7 @@ load_dotenv()
 
 print(os.getenv(MONGODB_URL_KEY))
 config = DataIngestionConfig()
-data = DataIngestion(config)
+data = DataIngestion()
 
 artifact = data.initiate_data_ingestion()
+print(artifact)
