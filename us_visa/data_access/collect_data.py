@@ -7,7 +7,6 @@ import sys
 from typing import Optional
 
 
-
 class CollectData:
     """
     This class helps to export mongo db records as pandas df

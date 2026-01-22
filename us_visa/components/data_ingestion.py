@@ -1,9 +1,7 @@
 import os
 import sys
 
-import pandas as pd
 from pandas import DataFrame
-import numpy as np
 from sklearn.model_selection import train_test_split
 
 from us_visa.data_access.collect_data import CollectData
