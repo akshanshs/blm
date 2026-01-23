@@ -82,6 +82,7 @@ class DataIngestion:
                                                             test_file_path=self.data_ingestion_config.test_file_path)
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             logging.info(f"Data ingestion artifact saved")
+            print(data_ingestion_artifact)
             return data_ingestion_artifact
         except Exception as e:
             raise USvisaException(e, sys)

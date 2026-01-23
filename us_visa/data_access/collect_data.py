@@ -19,7 +19,7 @@ class CollectData:
         except Exception as e:
             raise USvisaException(e, sys)
 
-    def export_collection_as_dataframe(self, collection_name:str, database_name: Optional[str]=None)->pd.DataFrame:
+    def export_collection_as_dataframe(self, collection_name:str, database_name: Optional[str] = None) -> pd.DataFrame:
         try:
             if database_name is None:
                 collection = self.mongo_client.database[collection_name]

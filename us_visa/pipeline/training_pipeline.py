@@ -32,7 +32,6 @@ class TrainPipeline:
         """
         try:
             data_ingestion_artifact = self.start_data_ingestion()
-            return data_ingestion_artifact
 
         except Exception as e:
             raise USvisaException(e, sys)
