@@ -12,7 +12,6 @@ class TrainPipeline:
         self.data_ingestion_config = DataIngestionConfig()
         logging.info(f"Data ingestion config created")
 
-
     def start_data_ingestion(self) -> DataIngestionArtifact:
         """
         This method of TrainPipeline class is responsible for data ingestion
@@ -33,6 +32,7 @@ class TrainPipeline:
         """
         try:
             data_ingestion_artifact = self.start_data_ingestion()
+            return data_ingestion_artifact
 
         except Exception as e:
             raise USvisaException(e, sys)
