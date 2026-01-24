@@ -23,7 +23,7 @@ class TrainPipeline:
             data_ingestion_artifact = data_ingestion.initiate_data_ingestion()
             return data_ingestion_artifact
         except Exception as e:
-            raise USvisaException(e, sys)
+            raise USvisaException(e, sys) from e
 
     def run_pipeline(self) -> None:
         """
@@ -34,4 +34,4 @@ class TrainPipeline:
             data_ingestion_artifact = self.start_data_ingestion()
 
         except Exception as e:
-            raise USvisaException(e, sys)
+            raise USvisaException(e, sys) from e

@@ -23,7 +23,7 @@ class DataIngestion:
         try:
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
-            raise USvisaException(e, sys)
+            raise USvisaException(e, sys) from e
 
     def export_data_into_feature_store(self) -> DataFrame:
         """
@@ -44,7 +44,7 @@ class DataIngestion:
             df.to_csv(feature_store_file_path, index=False, header=True)
             return df
         except Exception as e:
-            raise USvisaException(e, sys)
+            raise USvisaException(e, sys) from e
 
     def split_data_as_train_test(self, dataframe: DataFrame) -> None:
         """
@@ -64,7 +64,7 @@ class DataIngestion:
 
             logging.info(f"Saved training and test data")
         except Exception as e:
-            raise USvisaException(e, sys)
+            raise USvisaException(e, sys) from e
 
     def initiate_data_ingestion(self) -> DataIngestionArtifact:
 
@@ -85,4 +85,4 @@ class DataIngestion:
             print(data_ingestion_artifact)
             return data_ingestion_artifact
         except Exception as e:
-            raise USvisaException(e, sys)
+            raise USvisaException(e, sys) from e
