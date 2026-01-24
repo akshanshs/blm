@@ -31,6 +31,6 @@ class MongoDBClient:
             self.client = MongoDBClient.client
             self.database = self.client[database_name]
             self.database_name = database_name
-            logging.info("MongoDB connection succesfull")
+            logging.info("MongoDB connection successful")
         except Exception as e:
             raise USvisaException(e, sys) from e
